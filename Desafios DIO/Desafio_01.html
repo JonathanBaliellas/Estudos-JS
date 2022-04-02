@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+</head>
+<body>
+    <h1>Desafio 1</h1>
+    <section>
+        <p id="result"></p>
+    </section>    
+</body>
+<script>
+    let valor
+    let par=0
+    let impar=0
+    let positivo=0
+    let negativo=0
+    let result
+
+    result = document.getElementById('result')
+    
+    for(i=0;i<5;i++){
+        valor = window.prompt("Digite um valor inteiro")
+
+        if(valor % 2 == 0){
+            par++
+        }else{
+            impar++
+        }
+
+        if(valor >= 0){
+            positivo++
+        }else{
+            negativo++
+        }
+    }    
+    
+    result.innerHTML= `Pares: ${par}<br>
+        Ímpares: ${impar}<br>
+        Positivos: ${positivo}<br>
+        Negativos: ${negativo}`
+</script>
+</html>
