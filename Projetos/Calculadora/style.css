@@ -1,0 +1,74 @@
+body{    
+    background: linear-gradient(90deg, #1A2226 0%, #363D40 50%, #1A2226 100%);
+    font: normal 12pt calibri;
+    color: white;
+    text-align: center;    
+}
+
+#calc{
+    width: 340px;
+    border: 1pt;
+    border-color: rgb(194, 194, 194);
+    border-radius: 10pt;
+    border-style: inset;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #1A2226;
+}
+
+#sec_display{
+    padding-bottom: 20px;
+}
+
+#sec_memory{
+    padding-bottom: 5px;
+}
+
+#txt_edit{
+    font-size: xxx-large;
+    font-weight: 700;
+    color: white;
+}
+
+#txt_display{
+    color: #6b7377;
+}
+
+[type=text]{
+    background-color: #1A2226;
+    text-align: right;
+    width: 300px;
+    padding: 2px;
+    border-style: none;    
+}
+
+[type=button]{
+    width: 75px;
+    height: 50px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #363D40;
+    color: white;
+    font-size: large;
+    margin-top: 3px;    
+}
+
+.operator{
+    background-color: #2D3438;
+    font-weight: 100;
+    font-family: Calibri;
+}
+
+.calc{
+    background-color: #85CBCE;
+    color: #2D3438;
+}
+
+.memory{
+    width: 50px;
+    height: 20px;
+    background-color: transparent;
+    font-size: small;
+}

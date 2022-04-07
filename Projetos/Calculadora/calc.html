@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <section id="calc">
+        <section id="sec_display">
+            <input type="text" name="" id="txt_display"><br>
+            <input type="text" name="" id="txt_edit" value="0">
+        </section>
+
+        <section id="sec_memory">
+            <input type="button" value="MC" class="memory">
+            <input type="button" value="MR" class="memory">
+            <input type="button" value="M+" class="memory">
+            <input type="button" value="M-" class="memory">
+            <input type="button" value="MS" class="memory">
+            <input type="button" value="M∨" class="memory">
+        </section>
+
+        <section id="sec_botoes">
+            <input type="button" value="%" class="operator">
+            <input type="button" value="CE" class="operator">
+            <input type="button" value="C" class="operator" onclick="limpaTudo()">
+            <input type="button" value="␈" class="operator">
+            <br>
+
+            <input type="button" value="1⁄x" class="operator">
+            <input type="button" value="x²" class="operator">
+            <input type="button" value="√x" class="operator">
+            <input type="button" value="÷" class="operator">
+            <br>
+
+            <input type="button" value="7" id="btn_7" onclick="click_num(7)">
+            <input type="button" value="8" id="btn_8" onclick="click_num(8)">
+            <input type="button" value="9" id="btn_9" onclick="click_num(9)">
+            <input type="button" value="×" id="btn_x" class="operator" onclick="operacao('x')">            
+            <br>
+
+            <input type="button" value="4" onclick="click_num(4)">
+            <input type="button" value="5" onclick="click_num(5)">
+            <input type="button" value="6" onclick="click_num(6)">
+            <input type="button" value="-" class="operator" onclick="operacao('-')">
+            <br>
+
+            <input type="button" value="1" onclick="click_num(1)">
+            <input type="button" value="2" onclick="click_num(2)">
+            <input type="button" value="3" onclick="click_num(3)">
+            <input type="button" value="+" class="operator" onclick="operacao('+')">
+            <br>
+
+            <input type="button" value="+/-" onclick="pos_neg()">
+            <input type="button" value="0" onclick="click_num(0)">
+            <input type="button" value="," onclick="pt_flut()">
+            <input type="button" value="=" class="calc" onclick="igual()">
+        </section>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
