@@ -20,6 +20,7 @@ body{
 
 #sec_display{
     padding-bottom: 20px;
+    
 }
 
 #sec_memory{
@@ -32,7 +33,11 @@ body{
     color: white;
 }
 
-#txt_display{
+#lbl_display{
+    display: inline-block;
+    padding-right: 10px;
+    width: 300px;    
+    text-align: right;    
     color: #6b7377;
 }
 
