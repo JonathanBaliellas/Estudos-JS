@@ -27,13 +27,20 @@ body{
     padding-bottom: 5px;
 }
 
-#txt_edit{
+#lbl_display{    
     font-size: xxx-large;
     font-weight: 700;
     color: white;
+    text-align: right;    
+    width: 285px;    
+    padding: 2px;
+    padding-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
-#lbl_display{
+#lbl_operacao{
     display: inline-block;
     padding-right: 10px;
     width: 300px;    

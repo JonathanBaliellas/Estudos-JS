@@ -11,8 +11,8 @@
     <h1>Calculadora</h1>
     <section id="calc">
         <section id="sec_display">
-            <label for="" id="lbl_display"></label><br>
-            <input type="text" name="" id="txt_edit" value="0">
+            <label for="" id="lbl_operacao"></label><br>            
+            <p id="lbl_display">0</p>
         </section>
 
         <section id="sec_memory">
@@ -26,39 +26,39 @@
 
         <section id="sec_botoes">
             <input type="button" value="%" class="operator">
-            <input type="button" value="CE" class="operator">
-            <input type="button" value="C" class="operator" onclick="limpaTudo()">
-            <input type="button" value="␈" class="operator">
+            <input type="button" value="CE" class="operator" title="Cancela o último valor" onclick="apagar()">
+            <input type="button" value="C" class="operator" title="Limpa toda a operação" onclick="limpaTudo()">
+            <input type="button" value="␈" class="operator" title="Apaga o último digito" onclick="bkspc()">
             <br>
 
             <input type="button" value="1⁄x" class="operator">
             <input type="button" value="x²" class="operator">
             <input type="button" value="√x" class="operator">
-            <input type="button" value="÷" class="operator" onclick="operacao('/')">
+            <input type="button" value="÷" class="operator" onclick="calcular('/')">
             <br>
 
             <input type="button" value="7" id="btn_7" onclick="click_num(7)">
             <input type="button" value="8" id="btn_8" onclick="click_num(8)">
             <input type="button" value="9" id="btn_9" onclick="click_num(9)">
-            <input type="button" value="×" id="btn_x" class="operator" onclick="operacao('x')">            
+            <input type="button" value="×" id="btn_x" class="operator" onclick="calcular('x')">            
             <br>
 
             <input type="button" value="4" onclick="click_num(4)">
             <input type="button" value="5" onclick="click_num(5)">
             <input type="button" value="6" onclick="click_num(6)">
-            <input type="button" value="-" class="operator" onclick="operacao('-')">
+            <input type="button" value="-" class="operator" onclick="calcular('-')">
             <br>
 
             <input type="button" value="1" onclick="click_num(1)">
             <input type="button" value="2" onclick="click_num(2)">
             <input type="button" value="3" onclick="click_num(3)">
-            <input type="button" value="+" class="operator" onclick="operacao('+')">
+            <input type="button" value="+" class="operator" onclick="calcular('+')">
             <br>
 
             <input type="button" value="+/-" onclick="pos_neg()">
             <input type="button" value="0" onclick="click_num(0)">
             <input type="button" value="," onclick="pt_flut()">
-            <input type="button" value="=" class="calc" onclick="igual()">
+            <input type="button" value="=" class="calc" title="Calcular" onclick="calcular('=')">
         </section>
     </section>
 </body>
