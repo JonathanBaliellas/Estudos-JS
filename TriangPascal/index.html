@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/712627e99f.js" crossorigin="anonymous"></script>
+    <title>Teste Matriz</title>
+    <style>
+        .dark{
+            background-color: #282A36;
+            color: #f8f8f2;
+        }
+
+        .w3-button:hover{
+            background-color: #383A42!important;
+            color: white!important;
+        }
+
+        table{
+            max-width: 60%;
+            margin: auto;
+            color: #ffb86c;
+        }
+
+        td{
+            text-align: center !important;
+            margin: 5em !important;
+        }
+
+        .txt{
+            width: 4em;
+            background-color: #282A36;
+            border-style: solid;
+            border-color: #6272A4;
+            border-radius: 5px;
+            border-width: 1px;
+            color: #bd93f9;
+            text-align: center;
+        }
+
+        .w3-button{
+            border-radius: 5px;
+            color: #6272A4;
+        }
+    </style>
+</head>
+<body class="w3-margin dark w3-center">
+    <h1>Triângulo de Pascal</h1>
+    <h3 style="color: #ff79c6;">JavaScript</h2>
+    <section class="w3-container">
+        <div id="divTabela" class="w3-center w3-margin">
+            <table class="w3-table">
+                <tbody id="tabela"></tbody>
+            </table>
+        </div>
+        <div id="divControles">
+            <p style="color: #8be9fd;">
+                Dimensão da Matriz: 
+                <input type="number" name="txtDimensaoMatriz" id="txtDimensaoMatriz" min="2" step="1" class="txt" value="2">
+            </p>
+            <button class="w3-button" onclick="triangPascal()">
+                <i class="fa fa-play"></i>
+                Rodar
+            </button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
