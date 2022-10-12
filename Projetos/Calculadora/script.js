@@ -6,17 +6,27 @@ let valor2 = 0
 let result = 0
 let operStandby = false
 let operadorMemo = ''
+let modoDecimal = false
+let digitoDecimal = 0.1
 
 function click_num(num){//Insere números no display
     if (valorInput.toString().length < 11){ //Limita a quantidade de digitos a 11
+        if(modoDecimal == true){
+            valorInput = valorInput + (num * digitoDecimal)
+            atualizaDisplay()
+            digitoDecimal *= 0.1
+            return
+        }
+
         valorInput = valorInput * 10 + num
-        lbl_display.innerHTML = valorInput
+        atualizaDisplay()
     }    
 }
 
 function calcular(operador){//Realiza cálculos aritméticos conforme a operação escolhida
     valor1 = valorInput //valor1 recebe o valor do display
     valorInput = 0 //Zera o input para que o próximo número inicie do 0
+    resetaDecimal()
 
     //Efetua o cálculo
     if(operStandby == true){//Se houver dois valores para calcular, efetua a operação
@@ -69,24 +79,29 @@ function limpaTudo(){//Reinicia o programa (botão C)
     operStandby = false
     lbl_operacao.innerHTML = ''
     lbl_display.innerHTML = 0
+    resetaDecimal()
 }
 
-function apagar(){//Limpa o valor no display
+function apagar(){//Limpa o valor no display (botão CE)
     valorInput = 0
-    lbl_display.innerHTML = valorInput
+    atualizaDisplay()
+    resetaDecimal()
 }
 
 function bkspc(){//Exclui o último dígito
     valorInput /= 10
     valorInput = parseInt(valorInput) //Fica somente com a parte inteira
-    lbl_display.innerHTML = valorInput
+    atualizaDisplay()
 }
 
 function pos_neg(){//Alterna entre positivo e negativo
     valorInput *= -1
-    lbl_display.innerHTML = valorInput
+    atualizaDisplay()
 }
 
-function decimal(){//Insere o ponto flutuante
-
+function atualizaDisplay(){lbl_display.innerHTML = valorInput}
+function decimal(){modoDecimal = true} //Insere o ponto flutuante
+function resetaDecimal(){
+    modoDecimal = false //Desliga o modo decimal para que o próximo valor seja inteiro
+    digitoDecimal = 0.1 //Retorna para o padrão
 }

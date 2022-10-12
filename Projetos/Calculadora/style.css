@@ -16,6 +16,7 @@ body{
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: #1A2226;
+    box-shadow: 10px 10px 8px #1A2226;
 }
 
 #sec_display{
@@ -83,7 +84,7 @@ body{
 
 .calc{
     background-color: #85CBCE;
-    color: #2D3438;
+    color: #2D3438;    
 }
 
 .calc:hover{
