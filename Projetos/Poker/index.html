@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button onclick="embaralhar()">Embaralhar</button>
+        <button onclick="sacarCarta()">Sacar</button>
+        <button onclick="adicionarJogador()">Adicionar jogador</button>
+        <button onclick="removerJogador()">Remover jogador</button>
+        <button onclick="distribuirCartas()">Distribuir cartas</button>
+        <div>
+            Jogadores:
+            <span id="spn_numJogadores">0</span>
+        </div>
+    </header>
+    <main>
+        <div id="div_cartas">
+            
+        </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+    <script src="classes/Jogador.js"></script>
+</body>
+</html>
